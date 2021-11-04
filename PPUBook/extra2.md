@@ -62,6 +62,6 @@ WARNING! Очень желательно не вдыхать дым от сго�
 
 ![crack](/PPUBook/imgstore/crack.jpg)
 
-TBD: Добавить картинку отслоившегося чипа денди-клона
+![peeloff](/PPUBook/imgstore/peeloff.jpg)
 
 ![dirty](/PPUBook/imgstore/dirty.jpg)
