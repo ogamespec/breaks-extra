@@ -33,4 +33,6 @@ Yang - The Yang etch will decorate all common defects. Hot processing-induced de
 
 Ref: K. H. Yang, Journal of the Electrochemical Society, 131, 1984, p. 1140.
 
-https://www.semitracks.com/reference-material/failure-and-yield-analysis/failure-analysis-die-level/deprocessing.php
+- https://www.semitracks.com/reference-material/failure-and-yield-analysis/failure-analysis-die-level/deprocessing.php
+- https://siliconpr0n.org/wiki/doku.php?id=delayer:dash
+
