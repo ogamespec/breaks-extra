@@ -1,4 +1,4 @@
-# OAM DMA Circuit
+# Схема OAM DMA
 
 ![oam_dma_parts](/APUBook/imgstore/oam_dma_parts.png)
 
