@@ -19,10 +19,12 @@ OAM DMA is one of the two DMA controllers inside the APU.
 ## Main circuit components
 
 **RS-FF to store a write event to register $4014 (signal W4014)**
+
 This RS-FF is set when write operation W4014 is activated. The W4014 signal, like the other RegOps, is active only during PHI2 (second half of the CPU cycle).
 This RS-FF is cleared by the RES signal and also immediately after the start of OAM DMA (when the NOSPR signal becomes 0) ("autocleared")
 
 **CPU Read Cycle Detector**
+
 Made simple: `read_cycle = (R_W == 1) & (PHI1 == 0)`
 The need for the Read Cycle detector is due to the fact that the CPU ignores a low RDY signal during write cycles.
 
@@ -31,15 +33,19 @@ OAM DMA start event is considered to have occurred if:
 - Processor went into Read Cycle.
 
 **RS-FF "DMA Enabler"**
+
 Latches the OAM DMA start event (DOSPR signal). Cleared by SPRE signal and during reset (RES).
 
 **"No Sprite DMA" latch (nospr_latch)**
+
 This latch remembers the last DMA Enabler value, but only opens during #ACLK. Opening this latch during #ACLK is exactly related to the case of "unaligned DMA": even if all OAM DMA start events have been detected and stored on the DMA Enabler - the actual OAM DMA will not start until #ACLK has occurred.
 
 **RS-FF DirToggle**
+
 A regular FF that constantly changes its value from 0 to 1 and back, thus determining the direction of the OAM DMA.
 
 **RDY Generator**
+
 The RDY signal for the processor is simply the logical AND of signals oamdma_rdy and DMCReady.
 
 ## DMA Process
